@@ -399,6 +399,15 @@ export default function Home() {
                 <div>微博：{siteConfig.contact.social.weibo}</div>
                 <div>抖音：{siteConfig.contact.social.douyin}</div>
               </div>
+              {/* 管理后台入口 */}
+              <div className="mt-6 pt-6 border-t border-slate-800">
+                <a
+                  href="/admin"
+                  className="inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors"
+                >
+                  🔧 管理后台
+                </a>
+              </div>
             </div>
           </div>
 
