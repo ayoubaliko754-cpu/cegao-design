@@ -98,7 +98,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-7xl font-bold text-gray-500 mb-6 tracking-widest">
+          <h2 className="text-5xl md:text-7xl font-bold text-gray-400 mb-6" style={{ letterSpacing: '0.25em' }}>
             {siteConfig.hero.title}
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
