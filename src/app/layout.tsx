@@ -4,8 +4,8 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: '烟台策高装饰设计有限公司 | 专注室内设计',
-    template: '%s | 烟台策高装饰设计有限公司',
+    default: '策高室内装饰设计 | 专注室内设计与空间美学',
+    template: '%s | 策高室内装饰设计',
   },
   description:
     '烟台策高装饰设计有限公司是一家专注于高端室内设计、商业空间设计及软装搭配的专业设计机构。我们拥有经验丰富的设计团队，秉承"设计创造价值"的理念，为每一个项目注入独特的艺术灵魂。',
@@ -27,10 +27,10 @@ export const metadata: Metadata = {
   authors: [{ name: '烟台策高装饰设计团队' }],
   generator: '烟台策高装饰设计',
   openGraph: {
-    title: '烟台策高装饰设计有限公司 | 专注室内设计',
+    title: '策高室内装饰设计 | 专注室内设计与空间美学',
     description:
       '专注于高端室内设计与空间美学，为您打造独具匠心的品质空间',
-    siteName: '烟台策高装饰设计有限公司',
+    siteName: '策高室内装饰设计',
     locale: 'zh_CN',
     type: 'website',
   },
