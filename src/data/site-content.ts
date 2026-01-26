@@ -3,7 +3,7 @@
 
 export const siteConfig = {
   // 基本信息
-  companyName: '策高室内装饰设计',
+  companyName: '烟台策高装饰设计有限公司',
   slogan: '设计·创造·品质生活',
   tagline: '专注高端室内设计与空间美学',
 
@@ -18,7 +18,7 @@ export const siteConfig = {
 
   // Hero 区域
   hero: {
-    title: '策高室内装饰设计',
+    title: '策高設計',
     subtitle: '专注于高端室内设计与空间美学，为您打造独具匠心的品质空间',
     ctaText: '了解更多',
     ctaLink: '#about',
