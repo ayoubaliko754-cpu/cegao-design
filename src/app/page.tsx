@@ -39,7 +39,7 @@ export default function Home() {
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-gray-800">
+              <h1 className="text-2xl font-bold text-gray-600">
                 {siteConfig.companyName}
               </h1>
             </div>
@@ -98,7 +98,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-7xl font-bold text-gray-800 mb-6 tracking-tight">
+          <h2 className="text-5xl md:text-7xl font-bold text-gray-600 mb-6 tracking-tight">
             {siteConfig.hero.title}
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
