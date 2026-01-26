@@ -20,6 +20,7 @@ export const siteConfig = {
   hero: {
     title: '策高設計',
     subtitle: '专注于高端室内设计与空间美学，为您打造独具匠心的品质空间',
+    slogan: '专注室内设计',
     ctaText: '了解更多',
     ctaLink: '#about',
     backgroundImage: '/images/hero-bg.jpg', // 可以后期替换为真实图片

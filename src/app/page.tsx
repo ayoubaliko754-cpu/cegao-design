@@ -101,11 +101,11 @@ export default function Home() {
           <h2 className="text-5xl md:text-7xl font-bold text-gray-600 mb-6 tracking-tight">
             {siteConfig.hero.title}
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
             {siteConfig.hero.subtitle}
           </p>
-          <p className="text-lg text-primary font-semibold mb-12">
-            {siteConfig.slogan}
+          <p className="text-lg text-primary font-semibold mb-12" style={{ fontFamily: 'YouYuan, 幼圆, Arial, sans-serif' }}>
+            {siteConfig.hero.slogan}
           </p>
           <Button
             size="lg"
