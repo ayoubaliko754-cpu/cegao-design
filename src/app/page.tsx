@@ -168,9 +168,6 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               {siteConfig.projects.title}
             </h2>
-            <p className="text-xl text-muted-foreground">
-              {siteConfig.projects.subtitle}
-            </p>
           </div>
 
           {/* 项目网格 */}
