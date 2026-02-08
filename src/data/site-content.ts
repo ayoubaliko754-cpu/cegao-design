@@ -220,8 +220,8 @@ export const siteConfig = {
     description: '如果您有任何设计需求或疑问，欢迎随时联系我们，我们将竭诚为您服务。',
     info: {
       address: '烟台市莱山区港城东大街1172号',
-      phone: '400-888-8888',
-      email: 'contact@cegao-design.com',
+      phone: '13884666525',
+      email: '779207132@qq.com',
       workingHours: '周一至周五 9:00-18:00',
     },
     social: {
