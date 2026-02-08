@@ -94,9 +94,9 @@ export default function Home() {
         {/* 虚化背景图片 */}
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-            alt="Interior Design Background"
-            className="absolute inset-0 w-full h-full object-cover opacity-20 blur-[100px]"
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            alt="Creative Office Background"
+            className="absolute inset-0 w-full h-full object-cover grayscale brightness-150 contrast-90 opacity-15 blur-[150px]"
           />
         </div>
 
