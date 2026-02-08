@@ -91,6 +91,15 @@ export default function Home() {
 
       {/* Hero 区域 */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* 虚化背景图片 */}
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            alt="Interior Design Background"
+            className="absolute inset-0 w-full h-full object-cover opacity-20 blur-[100px]"
+          />
+        </div>
+
         {/* 背景装饰 */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-[50%] -right-[20%] w-[800px] h-[800px] bg-primary/20 rounded-full blur-3xl animate-pulse" />
