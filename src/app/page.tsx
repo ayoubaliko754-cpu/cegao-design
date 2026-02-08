@@ -94,7 +94,7 @@ export default function Home() {
         {/* 虚化背景图片 */}
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            src="https://images.unsplash.com/photo-1504384308090-c54be3852f33?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
             alt="Modern Architecture Background"
             className="absolute top-20 left-0 w-full h-[calc(100vh-5rem)] object-cover grayscale brightness-180 contrast-85 opacity-10 blur-[300px]"
           />
