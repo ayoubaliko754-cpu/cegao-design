@@ -219,7 +219,7 @@ export const siteConfig = {
     subtitle: '期待与您的合作',
     description: '如果您有任何设计需求或疑问，欢迎随时联系我们，我们将竭诚为您服务。',
     info: {
-      address: '浙江省杭州市西湖区文三路398号',
+      address: '烟台市莱山区港城东大街1172号',
       phone: '400-888-8888',
       email: 'contact@cegao-design.com',
       workingHours: '周一至周五 9:00-18:00',
