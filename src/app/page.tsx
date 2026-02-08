@@ -112,7 +112,7 @@ export default function Home() {
           <h2 className="text-5xl md:text-7xl font-bold text-[#3A5C79] mb-6" style={{ letterSpacing: '0.25em' }}>
             {siteConfig.hero.title}
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
+          <p className="text-2xl md:text-4xl text-muted-foreground mb-4 max-w-3xl mx-auto">
             {siteConfig.hero.subtitle}
           </p>
           <div className="text-lg font-semibold mb-12 flex flex-wrap justify-center gap-4 md:gap-8" style={{ fontFamily: 'YouYuan, 幼圆, Arial, sans-serif' }}>
