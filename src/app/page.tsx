@@ -267,6 +267,123 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 招贤纳士 */}
+      <section id="careers" className="py-24 bg-muted/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* 标题 */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              {siteConfig.careers.title}
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              {siteConfig.careers.subtitle}
+            </p>
+          </div>
+
+          {/* 简介描述 */}
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              {siteConfig.careers.description}
+            </p>
+          </div>
+
+          {/* 公司福利 */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">我们的福利</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {siteConfig.careers.benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="bg-background rounded-xl p-6 border border-border hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="text-primary mb-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                      <span className="text-2xl">✓</span>
+                    </div>
+                  </div>
+                  <p className="text-foreground font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 职位列表 */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">热招职位</h3>
+            <div className="space-y-6">
+              {siteConfig.careers.positions.map((position) => (
+                <div
+                  key={position.id}
+                  className="bg-background rounded-2xl p-8 border border-border hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                    <h4 className="text-2xl font-bold text-foreground mb-2 md:mb-0">
+                      {position.title}
+                    </h4>
+                    <Button className="md:w-auto w-full">
+                      投递简历
+                    </Button>
+                  </div>
+
+                  <div className="grid md:grid-cols-4 gap-4 mb-6">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <span className="text-xs">部门</span>
+                      </div>
+                      <span>{position.department}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <MapPin className="h-4 w-4" />
+                      </div>
+                      <span>{position.location}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <span className="text-xs">经验</span>
+                      </div>
+                      <span>{position.experience}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <span className="text-xs">学历</span>
+                      </div>
+                      <span>{position.education}</span>
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <h5 className="text-sm font-semibold text-foreground mb-2">职位描述</h5>
+                    <p className="text-muted-foreground">{position.description}</p>
+                  </div>
+
+                  <div>
+                    <h5 className="text-sm font-semibold text-foreground mb-3">任职要求</h5>
+                    <ul className="space-y-2">
+                      {position.requirements.map((req, index) => (
+                        <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <span className="text-primary mt-1">•</span>
+                          <span>{req}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 联系方式 */}
+          <div className="text-center bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8">
+            <h3 className="text-xl font-bold text-foreground mb-2">有意者请将简历发送至</h3>
+            <p className="text-2xl font-bold text-primary mb-4">
+              {siteConfig.careers.email}
+            </p>
+            <p className="text-muted-foreground">我们会在收到简历后尽快与您联系</p>
+          </div>
+        </div>
+      </section>
+
       {/* 联系我们 */}
       <section id="contact" className="py-24 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

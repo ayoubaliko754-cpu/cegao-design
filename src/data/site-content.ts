@@ -13,6 +13,7 @@ export const siteConfig = {
     { name: '关于我们', href: '#about' },
     { name: '项目案例', href: '#projects' },
     { name: '新闻动态', href: '#news' },
+    { name: '招贤纳士', href: '#careers' },
     { name: '联系我们', href: '#contact' },
   ],
 
@@ -144,6 +145,72 @@ export const siteConfig = {
         image: '/images/news4.jpg',
       },
     ],
+  },
+
+  // 招贤纳士
+  careers: {
+    title: '招贤纳士',
+    subtitle: '加入我们，共筑梦想',
+    description: '策高设计正在寻找有才华、有激情的设计师加入我们的团队。我们提供有竞争力的薪酬福利和广阔的发展空间。',
+    benefits: [
+      '具有竞争力的薪酬待遇',
+      '完善的社保公积金体系',
+      '丰富的培训和学习机会',
+      '舒适的办公环境和团队氛围',
+      '国内外设计项目参与机会',
+      '年度旅游和团队建设活动',
+    ],
+    positions: [
+      {
+        id: 1,
+        title: '资深室内设计师',
+        department: '设计部',
+        location: '烟台',
+        experience: '5年以上',
+        education: '本科及以上',
+        description: '负责高端住宅和商业空间的室内设计工作，带领设计团队完成项目。',
+        requirements: [
+          '室内设计、建筑学或相关专业本科及以上学历',
+          '5年以上高端室内设计经验',
+          '精通AutoCAD、Photoshop、SketchUp等设计软件',
+          '具备优秀的创意能力和设计表现力',
+          '有团队管理经验者优先',
+        ],
+      },
+      {
+        id: 2,
+        title: '软装设计师',
+        department: '软装部',
+        location: '烟台',
+        experience: '3年以上',
+        education: '大专及以上',
+        description: '负责项目软装方案设计、选材和搭配，提升空间整体效果。',
+        requirements: [
+          '室内设计、艺术设计相关专业',
+          '3年以上软装设计经验',
+          '熟悉各类软装材料和品牌',
+          '具备良好的色彩搭配和空间感',
+          '有高端项目经验者优先',
+        ],
+      },
+      {
+        id: 3,
+        title: '设计助理',
+        department: '设计部',
+        location: '烟台',
+        experience: '应届生',
+        education: '本科及以上',
+        description: '协助设计师完成方案设计、效果图制作和施工现场跟进。',
+        requirements: [
+          '室内设计、建筑学相关专业应届毕业生',
+          '熟练掌握设计软件基本操作',
+          '学习能力强，积极主动',
+          '对设计有热情和追求',
+          '有实习经验者优先',
+        ],
+      },
+    ],
+    email: 'hr@cegao-design.com',
   },
 
   // 联系方式
