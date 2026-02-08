@@ -114,18 +114,18 @@ export const siteConfig = {
     items: [
       {
         id: 1,
-        title: '策高设计荣获2024年度室内设计金奖',
-        date: '2024-01-15',
-        category: '公司新闻',
-        summary: '在刚刚结束的2024年度室内设计大赛中，策高设计的"湖畔别墅"项目荣获住宅设计金奖。',
+        title: '界面新闻 - 深度报道',
+        date: '2026-02-08',
+        category: '行业洞察',
+        summary: '了解更多行业动态和设计趋势，请访问我们的官方网站查看详细报道：https://www.jiemian.com/article/13933968.html',
         image: '/images/news1.jpg',
       },
       {
         id: 2,
-        title: '受邀参加国际设计周，展现中国设计力量',
-        date: '2024-02-20',
-        category: '活动动态',
-        summary: '策高设计受邀参加2024年米兰设计周，向世界展示中国设计的独特魅力和创新理念。',
+        title: '新浪财经 - 市场分析',
+        date: '2026-02-08',
+        category: '行业洞察',
+        summary: '查看最新的市场分析和行业资讯，请访问：https://k.sina.com.cn/article_1986249493_m7663c31503301gu3q.html',
         image: '/images/news2.jpg',
       },
       {
