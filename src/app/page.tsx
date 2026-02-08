@@ -46,12 +46,12 @@ export default function Home() {
 
             {/* 桌面导航 */}
             <div className="block">
-              <div className="flex items-center space-x-8">
+              <div className="flex items-center space-x-12">
                 {siteConfig.navMenu.map((item) => (
                   <button
                     key={item.name}
                     onClick={() => scrollToSection(item.href.replace('#', ''))}
-                    className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+                    className="text-base font-medium text-foreground transition-colors hover:text-primary px-3 py-2"
                   >
                     {item.name}
                   </button>
