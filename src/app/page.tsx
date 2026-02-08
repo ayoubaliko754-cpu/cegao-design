@@ -45,7 +45,7 @@ export default function Home() {
             </div>
 
             {/* 桌面导航 */}
-            <div className="hidden md:block">
+            <div className="hidden sm:block">
               <div className="flex items-center space-x-8">
                 {siteConfig.navMenu.map((item) => (
                   <button
@@ -60,7 +60,7 @@ export default function Home() {
             </div>
 
             {/* 移动端菜单按钮 */}
-            <div className="md:hidden">
+            <div className="sm:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-foreground"
@@ -73,7 +73,7 @@ export default function Home() {
 
         {/* 移动端菜单 */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-background border-t">
+          <div className="sm:hidden bg-background border-t">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {siteConfig.navMenu.map((item) => (
                 <button
