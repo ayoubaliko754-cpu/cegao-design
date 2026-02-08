@@ -118,7 +118,7 @@ export default function Home() {
           <div className="text-lg font-semibold mb-12 flex flex-wrap justify-center gap-4 md:gap-8" style={{ fontFamily: 'YouYuan, 幼圆, Arial, sans-serif' }}>
             {siteConfig.hero.slogan.split(' ').map((item, index) => (
               <span key={index} className="flex items-center text-primary">
-                <span className="w-2 h-2 rounded-full bg-primary mr-2"></span>
+                <span className="w-3 h-3 rounded-full bg-[#3A5C79] mr-2"></span>
                 {item}
               </span>
             ))}
