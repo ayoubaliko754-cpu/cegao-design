@@ -90,16 +90,16 @@ export default function Home() {
       </nav>
 
       {/* Hero 区域 */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
         {/* 虚化背景图片 */}
         <div className="absolute inset-0 overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1504384308090-c54be3852f33?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
             alt="Modern Architecture Background"
-            className="absolute top-20 left-0 w-full h-[calc(100vh-5rem)] object-cover grayscale brightness-120 contrast-90 opacity-25 blur-[150px]"
+            className="absolute top-20 left-0 w-full h-[calc(100vh-5rem)] object-cover grayscale brightness-110 contrast-95 opacity-40 blur-[100px]"
           />
-          {/* 白色渐变遮罩 - 从上到下，柔和羽化 */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/60 via-white/40 via-white/20 to-transparent" />
+          {/* 白色渐变遮罩 - 从上到下，轻微羽化 */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/50 via-white/30 to-transparent" />
         </div>
 
         {/* 背景装饰 */}
