@@ -96,7 +96,7 @@ export default function Home() {
           <img
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
             alt="Modern Architecture Background"
-            className="absolute bottom-0 left-0 w-full h-[80%] object-cover grayscale brightness-150 contrast-90 opacity-15 blur-[150px]"
+            className="absolute bottom-0 left-0 w-full h-[80%] object-cover grayscale brightness-150 contrast-90 opacity-15 blur-[200px]"
           />
           {/* 白色渐变遮罩 - 从上到下，柔和羽化，上方1/3更强虚化 */}
           <div className="absolute inset-0 bg-gradient-to-b from-white via-white/90 via-white/75 via-white/60 via-white/45 via-white/30 via-white/15 to-transparent" />
