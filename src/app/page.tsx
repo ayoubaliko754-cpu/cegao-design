@@ -94,8 +94,8 @@ export default function Home() {
         {/* 虚化背景图片 */}
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-            alt="Creative Office Background"
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            alt="Modern Architecture Background"
             className="absolute bottom-0 left-0 w-full h-[80%] object-cover grayscale brightness-150 contrast-90 opacity-15 blur-[150px]"
           />
           {/* 白色渐变遮罩 - 从上到下，柔和羽化 */}
