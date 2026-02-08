@@ -136,30 +136,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+          <div className="max-w-3xl mx-auto mb-16">
             {/* 文字内容 */}
             <div className="space-y-6">
               {siteConfig.about.description.map((paragraph, index) => (
                 <p key={index} className="text-lg text-muted-foreground leading-relaxed">
                   {paragraph}
                 </p>
-              ))}
-            </div>
-
-            {/* 统计数据 */}
-            <div className="grid grid-cols-2 gap-6">
-              {siteConfig.about.stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br from-primary/5 to-secondary/5 p-6 rounded-2xl border border-border hover:shadow-lg transition-all duration-300 hover:scale-105"
-                >
-                  <div className="text-4xl font-bold text-primary mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-muted-foreground">
-                    {stat.label}
-                  </div>
-                </div>
               ))}
             </div>
           </div>
