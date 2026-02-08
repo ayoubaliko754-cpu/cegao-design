@@ -115,9 +115,14 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
             {siteConfig.hero.subtitle}
           </p>
-          <p className="text-lg text-primary font-semibold mb-12" style={{ fontFamily: 'YouYuan, 幼圆, Arial, sans-serif' }}>
-            {siteConfig.hero.slogan}
-          </p>
+          <div className="text-lg font-semibold mb-12 flex flex-wrap justify-center gap-4 md:gap-8" style={{ fontFamily: 'YouYuan, 幼圆, Arial, sans-serif' }}>
+            {siteConfig.hero.slogan.split(' ').map((item, index) => (
+              <span key={index} className="flex items-center text-primary">
+                <span className="w-2 h-2 rounded-full bg-primary mr-2"></span>
+                {item}
+              </span>
+            ))}
+          </div>
           <Button
             size="lg"
             className="h-14 px-8 text-base rounded-full font-semibold"
