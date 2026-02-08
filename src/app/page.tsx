@@ -39,7 +39,7 @@ export default function Home() {
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-gray-600">
+              <h1 className="text-2xl font-bold text-[#3A5C79] tracking-[0.25em]">
                 {siteConfig.companyName}
               </h1>
             </div>
