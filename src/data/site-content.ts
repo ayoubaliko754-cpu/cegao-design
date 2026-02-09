@@ -103,6 +103,15 @@ export const siteConfig = {
         area: '600㎡',
         location: '成都',
       },
+      {
+        id: 7,
+        title: '云谷里营销中心',
+        category: '地产售楼处',
+        description: '方案以 "智慧升维·总部镜像" 为核心理念。我们将营销中心本身塑造为一个可感知、可交互、可体验的"智慧建筑微缩模型"。来访者在此亲身体验未来在其独栋办公总部中可能实现的智能化场景、高效工作方式及卓越生态形象。',
+        image: '/images/project7.jpg',
+        area: '1800㎡',
+        location: '烟台',
+      },
     ],
   },
 
