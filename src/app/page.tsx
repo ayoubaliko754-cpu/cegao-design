@@ -182,12 +182,17 @@ export default function Home() {
                 key={project.id}
                 className="group bg-background rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
               >
-                {/* 项目图片占位 */}
-                <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                  <div className="text-center p-6">
-                    <div className="text-6xl font-bold text-primary/30 mb-2">{project.id}</div>
-                    <div className="text-sm text-muted-foreground/60">项目图片</div>
-                  </div>
+                {/* 项目图片 */}
+                <div className="aspect-[4/3] overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = '/images/project-placeholder.jpg';
+                    }}
+                  />
                 </div>
 
                 {/* 项目信息 */}
