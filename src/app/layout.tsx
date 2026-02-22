@@ -2,6 +2,13 @@ import type { Metadata } from 'next';
 import { Inspector } from 'react-dev-inspector';
 import './globals.css';
 
+// Polyfill for toSorted() method
+if (!Array.prototype.toSorted) {
+  Array.prototype.toSorted = function(compareFn) {
+    return [...this].sort(compareFn);
+  };
+}
+
 export const metadata: Metadata = {
   title: {
     default: '策高室内装饰设计 | 专注室内设计与空间美学',
