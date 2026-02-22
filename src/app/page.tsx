@@ -156,7 +156,7 @@ export default function Home() {
             {/* 文字内容 */}
             <div className="space-y-6">
               {siteConfig.about.description.map((paragraph, index) => (
-                <p key={index} className="text-lg text-muted-foreground leading-relaxed">
+                <p key={index} className="text-xl text-muted-foreground leading-relaxed font-semibold">
                   {paragraph}
                 </p>
               ))}
