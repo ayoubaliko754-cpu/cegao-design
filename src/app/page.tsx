@@ -96,10 +96,10 @@ export default function Home() {
           <img
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
             alt="Modern Architecture Background"
-            className="absolute top-20 left-0 w-full h-[calc(100vh-5rem)] object-cover grayscale brightness-110 contrast-95 opacity-40 blur-[100px]"
+            className="absolute top-20 left-0 w-full h-[calc(100vh-5rem)] object-cover grayscale brightness-125 contrast-90 opacity-25 blur-[120px]"
           />
-          {/* 白色渐变遮罩 - 从上到下，轻微羽化 */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/50 via-white/30 to-transparent" />
+          {/* 白色渐变遮罩 - 更强的白色覆盖 */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 via-white/60 to-white/40" />
         </div>
 
         {/* 背景装饰 */}
