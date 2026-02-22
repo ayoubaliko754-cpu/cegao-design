@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "bash ./scripts/build.sh",
-    "dev": "bash ./scripts/dev.sh",
+    "build": "next build",
+    "dev": "next dev --port 5000",
     "preinstall": "npx only-allow pnpm",
     "lint": "eslint",
-    "start": "bash ./scripts/start.sh",
-    "ts-check": "tsc -p tsconfig.json"
+    "start": "next start",
+    "ts-check": "tsc -p tsconfig.json",
+    "build:coze": "bash ./scripts/build.sh",
+    "dev:coze": "bash ./scripts/dev.sh",
+    "start:coze": "bash ./scripts/start.sh"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.958.0",
