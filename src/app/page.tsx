@@ -144,7 +144,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 标题 */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#3A5C79] mb-4">
               {siteConfig.about.title}
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -170,7 +170,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 标题 */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#3A5C79] mb-4">
               {siteConfig.projects.title}
             </h2>
           </div>
@@ -240,7 +240,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 标题 */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#3A5C79] mb-4">
               {siteConfig.news.title}
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -290,7 +290,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 标题 */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#3A5C79] mb-4">
               {siteConfig.careers.title}
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -407,7 +407,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 标题 */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#3A5C79] mb-4">
               {siteConfig.contact.title}
             </h2>
             <p className="text-xl text-muted-foreground mb-4">
