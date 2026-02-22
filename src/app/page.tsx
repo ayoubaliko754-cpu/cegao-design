@@ -176,7 +176,7 @@ export default function Home() {
           </div>
 
           {/* 项目网格 */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {siteConfig.projects.items.map((project, index) => (
               <div
                 key={project.id}
