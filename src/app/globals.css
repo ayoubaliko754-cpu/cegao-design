@@ -136,6 +136,17 @@ body {
   @apply font-sans tracking-widest;
 }
 
+/* 策高设计品牌字体粗体样式 */
+.font-brand {
+  font-weight: 900 !important;
+  font-family: 'YouYuan', '幼圆', sans-serif !important;
+}
+
+/* 确保幼圆字体的粗体效果更明显 */
+h1, h2, h3 {
+  font-weight: 900;
+}
+
 /* 平滑滚动 */
 html {
   scroll-behavior: smooth;
