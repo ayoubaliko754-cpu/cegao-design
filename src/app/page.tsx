@@ -190,7 +190,7 @@ export default function Home() {
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
-                      target.src = '/images/project-placeholder.jpg';
+                      target.src = '/images/project-placeholder.svg';
                     }}
                   />
                 </div>
