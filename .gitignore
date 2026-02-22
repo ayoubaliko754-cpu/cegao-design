@@ -83,6 +83,9 @@ Desktop.ini
 .tmp/
 .temp/
 
+# Coze temporary assets
+assets/
+
 # Optional files
 *.tgz
 *.gz
