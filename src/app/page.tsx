@@ -37,7 +37,8 @@ export default function Home() {
         }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-20 items-center justify-between">
+          {/* 桌面端导航 */}
+          <div className="hidden md:flex h-20 items-center justify-between">
             {/* Logo */}
             <div className="flex-shrink-0">
               <h1 className="text-2xl font-black font-brand text-[#3A5C79] tracking-[0.25em]" style={{ fontFamily: 'Microsoft YaHei, 微软雅黑, Arial, sans-serif' }}>
@@ -46,7 +47,7 @@ export default function Home() {
             </div>
 
             {/* 桌面导航 */}
-            <div className="block">
+            <div>
               <div className="flex items-center space-x-4 mr-16">
                 {siteConfig.navMenu.map((item) => (
                   <button
@@ -59,39 +60,37 @@ export default function Home() {
                 ))}
               </div>
             </div>
+          </div>
 
-            {/* 移动端菜单按钮 */}
-            <div className="hidden">
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-foreground"
-              >
-                {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
+          {/* 手机端导航 */}
+          <div className="md:hidden">
+            {/* Logo */}
+            <div className="flex justify-center py-4">
+              <h1 className="text-lg font-black font-brand text-[#3A5C79] tracking-[0.15em]" style={{ fontFamily: 'Microsoft YaHei, 微软雅黑, Arial, sans-serif' }}>
+                {siteConfig.companyName}
+              </h1>
+            </div>
+
+            {/* 手机端导航菜单 - 居中显示 */}
+            <div className="border-t">
+              <div className="flex justify-center flex-wrap gap-2 py-3">
+                {siteConfig.navMenu.map((item) => (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href.replace('#', ''))}
+                    className="text-sm font-medium text-foreground transition-colors hover:text-primary px-3 py-1.5 bg-muted/30 rounded-full hover:bg-muted/50"
+                  >
+                    {item.name}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-
-        {/* 移动端菜单 */}
-        {mobileMenuOpen && (
-          <div className="xs:hidden bg-background border-t">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {siteConfig.navMenu.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href.replace('#', ''))}
-                  className="block w-full text-left px-3 py-2 text-base font-medium text-foreground hover:bg-muted rounded-md"
-                >
-                  {item.name}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
       </nav>
 
       {/* Hero 区域 */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-32 md:pt-20">
         {/* 虚化背景图片 */}
         <div className="absolute inset-0 overflow-hidden">
           <img
