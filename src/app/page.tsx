@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/data/site-content';
 import { ArrowRight, Calendar, MapPin, Phone, Mail, Clock, ChevronRight, Menu, X } from 'lucide-react';
@@ -178,12 +179,13 @@ export default function Home() {
           {/* 项目网格 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {siteConfig.projects.items.map((project, index) => (
-              <div
+              <Link
                 key={project.id}
-                className="group bg-background rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                href={`/projects/${project.id}`}
+                className="group bg-background rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
               >
                 {/* 项目图片 */}
-                <div className="aspect-[4/3] overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                <div className="aspect-[4/3] overflow-hidden group-hover:scale-105 transition-transform duration-500 relative">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -193,11 +195,15 @@ export default function Home() {
                       target.src = '/images/project-placeholder.svg';
                     }}
                   />
+                  {/* 悬停提示 */}
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-white font-medium">点击查看详情</span>
+                  </div>
                 </div>
 
                 {/* 项目信息 */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2">
+                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-[#3A5C79] transition-colors">
                     {project.title}
                   </h3>
 
@@ -215,7 +221,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
