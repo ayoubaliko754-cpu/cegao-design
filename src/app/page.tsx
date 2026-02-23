@@ -40,7 +40,7 @@ export default function Home() {
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-black font-brand text-[#3A5C79] tracking-[0.25em]">
+              <h1 className="text-2xl font-black font-brand text-[#3A5C79] tracking-[0.25em]" style={{ fontFamily: 'Microsoft YaHei, 微软雅黑, Arial, sans-serif' }}>
                 {siteConfig.companyName}
               </h1>
             </div>
@@ -110,7 +110,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-7xl font-black font-brand text-[#3A5C79] mb-6" style={{ letterSpacing: '0.25em' }}>
+          <h2 className="text-5xl md:text-7xl font-black font-brand text-[#3A5C79] mb-6" style={{ letterSpacing: '0.25em', fontFamily: 'Microsoft YaHei, 微软雅黑, Arial, sans-serif' }}>
             {siteConfig.hero.title}
           </h2>
           <p className="text-lg md:text-2xl text-muted-foreground mb-4 max-w-5xl mx-auto font-semibold" style={{ fontFamily: 'YouYuan, 幼圆, Arial, sans-serif' }}>
