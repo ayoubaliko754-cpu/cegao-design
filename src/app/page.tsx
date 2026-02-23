@@ -278,7 +278,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      </section>
 
       {/* 招贤纳士 */}
       <section id="careers" className="py-16 md:py-24 bg-muted/30">
