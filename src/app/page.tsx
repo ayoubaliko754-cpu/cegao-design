@@ -397,7 +397,7 @@ export default function Home() {
       </section>
 
       {/* 联系我们 */}
-      <section id="contact" className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <section id="contact" className="py-16 md:py-24 bg-gradient-to-br from-[#3A5C79]/5 to-[#3A5C79]/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 标题 */}
           <div className="text-center mb-12 md:mb-16">
@@ -415,8 +415,8 @@ export default function Home() {
           {/* 联系信息 */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
             <div className="bg-background rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
-                <MapPin className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-[#3A5C79]/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                <MapPin className="h-5 w-5 md:h-6 md:w-6 text-[#3A5C79]" />
               </div>
               <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">公司地址</h4>
               <p className="text-sm md:text-base font-bold text-foreground/80">
@@ -425,8 +425,8 @@ export default function Home() {
             </div>
 
             <div className="bg-background rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
-                <Phone className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-[#3A5C79]/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                <Phone className="h-5 w-5 md:h-6 md:w-6 text-[#3A5C79]" />
               </div>
               <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">联系电话</h4>
               <p className="text-sm md:text-base font-bold text-foreground/80">
@@ -435,8 +435,8 @@ export default function Home() {
             </div>
 
             <div className="bg-background rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
-                <Mail className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-[#3A5C79]/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                <Mail className="h-5 w-5 md:h-6 md:w-6 text-[#3A5C79]" />
               </div>
               <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">电子邮箱</h4>
               <p className="text-sm md:text-base font-bold text-foreground/80">
@@ -445,8 +445,8 @@ export default function Home() {
             </div>
 
             <div className="bg-background rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
-                <Clock className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-[#3A5C79]/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                <Clock className="h-5 w-5 md:h-6 md:w-6 text-[#3A5C79]" />
               </div>
               <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">工作时间</h4>
               <p className="text-sm md:text-base font-bold text-foreground/80">
@@ -457,7 +457,7 @@ export default function Home() {
 
           {/* CTA 按钮 */}
           <div className="text-center">
-            <Button size="lg" className="h-12 md:h-14 px-8 md:px-10 text-sm md:text-base rounded-full font-semibold">
+            <Button size="lg" className="h-12 md:h-14 px-8 md:px-10 text-sm md:text-base rounded-full font-semibold bg-[#3A5C79] text-white hover:bg-[#2d4a62]">
               立即联系我们
               <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
             </Button>
