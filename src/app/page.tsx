@@ -303,8 +303,8 @@ export default function Home() {
                   key={index}
                   className="bg-background rounded-xl p-6 border border-border hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="text-primary mb-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <div className="text-[#3A5C79] mb-3">
+                    <div className="w-12 h-12 rounded-full bg-[#3A5C79]/10 flex items-center justify-center">
                       <span className="text-2xl">✓</span>
                     </div>
                   </div>
@@ -334,25 +334,25 @@ export default function Home() {
 
                   <div className="grid md:grid-cols-4 gap-4 mb-6">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-lg bg-[#3A5C79]/10 flex items-center justify-center">
                         <span className="text-xs">部门</span>
                       </div>
                       <span>{position.department}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-lg bg-[#3A5C79]/10 flex items-center justify-center">
                         <MapPin className="h-4 w-4" />
                       </div>
                       <span>{position.location}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-lg bg-[#3A5C79]/10 flex items-center justify-center">
                         <span className="text-xs">经验</span>
                       </div>
                       <span>{position.experience}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-lg bg-[#3A5C79]/10 flex items-center justify-center">
                         <span className="text-xs">学历</span>
                       </div>
                       <span>{position.education}</span>
@@ -369,7 +369,7 @@ export default function Home() {
                     <ul className="space-y-2">
                       {position.requirements.map((req, index) => (
                         <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <span className="text-primary mt-1">•</span>
+                          <span className="text-[#3A5C79] mt-1">•</span>
                           <span>{req}</span>
                         </li>
                       ))}
