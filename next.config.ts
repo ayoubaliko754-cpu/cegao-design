@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
         hostname: 'www.ytcegao.com',
         pathname: '/**',
       },
+      {
+        protocol: 'http',
+        hostname: 'taur4gphx.hb-bkt.clouddn.com',
+        pathname: '/**',
+      },
     ],
   },
 };
