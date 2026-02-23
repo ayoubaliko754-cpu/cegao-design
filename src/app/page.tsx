@@ -47,7 +47,7 @@ export default function Home() {
 
             {/* 桌面导航 */}
             <div className="block">
-              <div className="flex items-center space-x-12">
+              <div className="flex items-center space-x-6 mr-8">
                 {siteConfig.navMenu.map((item) => (
                   <button
                     key={item.name}
