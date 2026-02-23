@@ -91,15 +91,15 @@ export default function Home() {
 
       {/* Hero 区域 */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
-        {/* 虚化背景图片 - 几乎不可见 */}
+        {/* 虚化背景图片 */}
         <div className="absolute inset-0 overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
             alt="Modern Architecture Background"
-            className="absolute top-20 left-0 w-full h-[calc(100vh-5rem)] object-cover grayscale brightness-150 contrast-85 opacity-8 blur-[150px]"
+            className="absolute top-0 left-0 w-full h-full object-cover grayscale brightness-125 contrast-100 opacity-50 blur-20"
           />
-          {/* 几乎纯白遮罩 */}
-          <div className="absolute inset-0 bg-white/95" />
+          {/* 白色遮罩 - 降低透明度，让背景可见 */}
+          <div className="absolute inset-0 bg-white/60" />
         </div>
 
         {/* 背景装饰 */}
