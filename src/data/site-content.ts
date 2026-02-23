@@ -384,22 +384,6 @@ export const siteConfig = {
     ],
     positions: [
       {
-        id: 1,
-        title: '资深室内设计师',
-        department: '设计部',
-        location: '烟台',
-        experience: '5年以上',
-        education: '本科及以上',
-        description: '负责高端住宅和商业空间的室内设计工作，带领设计团队完成项目。',
-        requirements: [
-          '室内设计、建筑学或相关专业本科及以上学历',
-          '5年以上高端室内设计经验',
-          '精通AutoCAD、Photoshop、SketchUp等设计软件',
-          '具备优秀的创意能力和设计表现力',
-          '有团队管理经验者优先',
-        ],
-      },
-      {
         id: 2,
         title: '软装设计师',
         department: '软装部',
