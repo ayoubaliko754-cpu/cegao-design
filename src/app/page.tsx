@@ -197,12 +197,6 @@ export default function Home() {
 
                 {/* 项目信息 */}
                 <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs font-medium px-3 py-1 rounded-full bg-primary/10 text-primary">
-                      {project.category}
-                    </span>
-                  </div>
-
                   <h3 className="text-xl font-bold text-foreground mb-2">
                     {project.title}
                   </h3>
@@ -256,11 +250,6 @@ export default function Home() {
                 className="group bg-muted/30 rounded-2xl p-8 hover:bg-muted/50 transition-all duration-300 hover:shadow-lg cursor-pointer"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-medium px-3 py-1 rounded-full bg-primary/10 text-primary">
-                      {news.category}
-                    </span>
-                  </div>
                   <div className="flex items-center gap-1 text-xs text-muted-foreground">
                     <Calendar className="h-4 w-4" />
                     <span>{news.date}</span>
