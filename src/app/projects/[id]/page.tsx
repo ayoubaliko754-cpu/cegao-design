@@ -5,29 +5,40 @@ import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/data/site-content';
 import { ArrowLeft, MapPin, Calendar, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 
-interface ProjectDetailProps {
-  params: {
-    id: string;
-  };
-}
-
-export default function ProjectDetail({ params }: ProjectDetailProps) {
+export default function ProjectDetail() {
+  const params = useParams();
   const [project, setProject] = useState<any>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showLightbox, setShowLightbox] = useState(false);
 
   useEffect(() => {
+    console.log('Params:', params);
+    console.log('Params id:', params.id);
+
     // 根据 ID 查找项目
-    const projectId = parseInt(params.id);
+    const projectId = parseInt(params.id as string);
+    console.log('Parsed project ID:', projectId);
+    console.log('Available projects:', siteConfig.projects.items.map(p => ({ id: p.id, title: p.title })));
+
     const foundProject = siteConfig.projects.items.find((p) => p.id === projectId);
+    console.log('Found project:', foundProject);
     setProject(foundProject);
   }, [params.id]);
 
   if (!project) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-lg text-muted-foreground">项目未找到</p>
+        <div className="text-center">
+          <p className="text-lg text-muted-foreground mb-4">项目未找到</p>
+          <Link href="/#projects">
+            <Button variant="outline">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              返回案例列表
+            </Button>
+          </Link>
+        </div>
       </div>
     );
   }
@@ -95,6 +106,10 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
               alt={`${project.title} - ${currentImageIndex + 1}`}
               className="w-full aspect-[16/9] object-cover cursor-pointer"
               onClick={() => openLightbox(currentImageIndex)}
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = '/images/project-placeholder.svg';
+              }}
             />
             {/* 导航按钮 */}
             {project.images.length > 1 && (
@@ -138,6 +153,10 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
                     src={image}
                     alt={`${project.title} - ${index + 1}`}
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = '/images/project-placeholder.svg';
+                    }}
                   />
                 </button>
               ))}
