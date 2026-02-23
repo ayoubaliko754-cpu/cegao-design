@@ -109,28 +109,28 @@ export default function Home() {
           <div className="absolute -bottom-[50%] -left-[20%] w-[600px] h-[600px] bg-secondary/20 rounded-full blur-3xl animate-pulse delay-1000" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-7xl font-black font-brand text-[#3A5C79] mb-6" style={{ letterSpacing: '0.25em', fontFamily: 'Microsoft YaHei, 微软雅黑, Arial, sans-serif' }}>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center w-full">
+          <h2 className="text-4xl md:text-7xl font-black font-brand text-[#3A5C79] mb-6" style={{ letterSpacing: '0.25em', fontFamily: 'Microsoft YaHei, 微软雅黑, Arial, sans-serif' }}>
             {siteConfig.hero.title}
           </h2>
-          <p className="text-lg md:text-2xl text-muted-foreground mb-4 max-w-5xl mx-auto font-semibold" style={{ fontFamily: 'YouYuan, 幼圆, Arial, sans-serif' }}>
+          <p className="text-base md:text-2xl text-muted-foreground mb-4 max-w-5xl mx-auto font-semibold" style={{ fontFamily: 'YouYuan, 幼圆, Arial, sans-serif' }}>
             {siteConfig.hero.subtitle}
           </p>
-          <div className="text-lg font-semibold mb-12 flex flex-wrap justify-center gap-4 md:gap-8 text-[#3A5C79]" style={{ fontFamily: 'YouYuan, 幼圆, Arial, sans-serif' }}>
+          <div className="text-base md:text-lg font-semibold mb-12 flex flex-wrap justify-center gap-2 md:gap-8 text-[#3A5C79]" style={{ fontFamily: 'YouYuan, 幼圆, Arial, sans-serif' }}>
             {siteConfig.hero.slogan.split(' ').map((item, index) => (
-              <span key={index} className="flex items-center">
-                <span className="w-3 h-3 rounded-full bg-[#3A5C79] mr-2"></span>
+              <span key={index} className="flex items-center justify-center text-sm md:text-base">
+                <span className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#3A5C79] mr-1 md:mr-2"></span>
                 {item}
               </span>
             ))}
           </div>
           <Button
             size="lg"
-            className="h-14 px-8 text-base rounded-full font-semibold bg-gray-700 text-white hover:bg-gray-600"
+            className="h-12 md:h-14 px-6 md:px-8 text-sm md:text-base rounded-full font-semibold bg-gray-700 text-white hover:bg-gray-600"
             onClick={() => scrollToSection('about')}
           >
             {siteConfig.hero.ctaText}
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
           </Button>
         </div>
 
@@ -167,17 +167,17 @@ export default function Home() {
       </section>
 
       {/* 项目案例 */}
-      <section id="projects" className="py-24 bg-muted/30">
+      <section id="projects" className="py-16 md:py-24 bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 标题 */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#3A5C79] mb-4">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#3A5C79] mb-4">
               {siteConfig.projects.title}
             </h2>
           </div>
 
           {/* 项目网格 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {siteConfig.projects.items.map((project, index) => (
               <Link
                 key={project.id}
@@ -195,25 +195,25 @@ export default function Home() {
                       target.src = '/images/project-placeholder.svg';
                     }}
                   />
-                  {/* 悬停提示 */}
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  {/* 悬停提示 - 仅在桌面显示 */}
+                  <div className="absolute inset-0 bg-black/50 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span className="text-white font-medium">点击查看详情</span>
                   </div>
                 </div>
 
                 {/* 项目信息 */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-[#3A5C79] transition-colors">
+                <div className="p-4 md:p-6">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 text-center md:text-left group-hover:text-[#3A5C79] transition-colors">
                     {project.title}
                   </h3>
 
-                  <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                  <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4 line-clamp-2 text-center md:text-left">
                     {project.description}
                   </p>
 
-                  <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                  <div className="flex items-center justify-center md:justify-start gap-3 md:gap-4 text-xs text-muted-foreground">
                     <div className="flex items-center gap-1">
-                      <MapPin className="h-4 w-4" />
+                      <MapPin className="h-3 w-3 md:h-4 md:w-4" />
                       <span>{project.location}</span>
                     </div>
                     <div className="flex items-center gap-1">
@@ -226,7 +226,7 @@ export default function Home() {
           </div>
 
           {/* 查看更多按钮 */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 md:mt-12">
             <Button size="lg" variant="outline" className="rounded-full">
               查看更多案例
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -236,24 +236,24 @@ export default function Home() {
       </section>
 
       {/* 新闻动态 */}
-      <section id="news" className="py-24 bg-background">
+      <section id="news" className="py-16 md:py-24 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 标题 */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#3A5C79] mb-4">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#3A5C79] mb-4">
               {siteConfig.news.title}
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground">
               {siteConfig.news.subtitle}
             </p>
           </div>
 
           {/* 新闻列表 */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {siteConfig.news.items.map((news, index) => (
               <div
                 key={news.id}
-                className="group bg-muted/30 rounded-2xl p-8 hover:bg-muted/50 transition-all duration-300 hover:shadow-lg cursor-pointer"
+                className="group bg-muted/30 rounded-2xl p-6 md:p-8 hover:bg-muted/50 transition-all duration-300 hover:shadow-lg cursor-pointer"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-1 text-xs text-muted-foreground">
@@ -262,11 +262,11 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-lg md:text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                   {news.title}
                 </h3>
 
-                <p className="text-muted-foreground line-clamp-2 mb-4">
+                <p className="text-sm md:text-base text-muted-foreground line-clamp-2 mb-4">
                   {news.summary}
                 </p>
 
@@ -279,58 +279,59 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </section>
 
       {/* 招贤纳士 */}
-      <section id="careers" className="py-24 bg-muted/30">
+      <section id="careers" className="py-16 md:py-24 bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 标题 */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#3A5C79] mb-4">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#3A5C79] mb-4">
               {siteConfig.careers.title}
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground">
               {siteConfig.careers.subtitle}
             </p>
           </div>
 
           {/* 简介描述 */}
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+          <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               {siteConfig.careers.description}
             </p>
           </div>
 
           {/* 公司福利 */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">我们的福利</h3>
-            <div className="grid md:grid-cols-3 gap-6">
+          <div className="mb-12 md:mb-16">
+            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 md:mb-8 text-center">我们的福利</h3>
+            <div className="grid md:grid-cols-3 gap-4 md:gap-6">
               {siteConfig.careers.benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-background rounded-xl p-6 border border-border hover:shadow-lg transition-all duration-300"
+                  className="bg-background rounded-xl p-4 md:p-6 border border-border hover:shadow-lg transition-all duration-300 text-center"
                 >
                   <div className="text-[#3A5C79] mb-3">
-                    <div className="w-12 h-12 rounded-full bg-[#3A5C79]/10 flex items-center justify-center">
-                      <span className="text-2xl">✓</span>
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#3A5C79]/10 flex items-center justify-center mx-auto">
+                      <span className="text-xl md:text-2xl">✓</span>
                     </div>
                   </div>
-                  <p className="text-foreground font-medium">{benefit}</p>
+                  <p className="text-sm md:text-base text-foreground font-medium">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* 职位列表 */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">热招职位</h3>
+          <div className="mb-12 md:mb-16">
+            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 md:mb-8 text-center">热招职位</h3>
             <div className="space-y-6">
               {siteConfig.careers.positions.map((position) => (
                 <div
                   key={position.id}
-                  className="bg-background rounded-2xl p-8 border border-border hover:shadow-lg transition-all duration-300"
+                  className="bg-background rounded-2xl p-6 md:p-8 border border-border hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                    <h4 className="text-2xl font-bold text-foreground mb-2 md:mb-0">
+                    <h4 className="text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-0 text-center md:text-left">
                       {position.title}
                     </h4>
                     <Button className="md:w-auto w-full">
@@ -398,59 +399,59 @@ export default function Home() {
       </section>
 
       {/* 联系我们 */}
-      <section id="contact" className="py-24 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <section id="contact" className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 标题 */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#3A5C79] mb-4">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#3A5C79] mb-4">
               {siteConfig.contact.title}
             </h2>
-            <p className="text-xl text-muted-foreground mb-4">
+            <p className="text-lg md:text-xl text-muted-foreground mb-4">
               {siteConfig.contact.subtitle}
             </p>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
               {siteConfig.contact.description}
             </p>
           </div>
 
           {/* 联系信息 */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div className="bg-background rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="h-6 w-6 text-primary" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
+            <div className="bg-background rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                <MapPin className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               </div>
-              <h4 className="font-semibold text-foreground mb-2">公司地址</h4>
-              <p className="text-base font-bold text-foreground/80">
+              <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">公司地址</h4>
+              <p className="text-sm md:text-base font-bold text-foreground/80">
                 {siteConfig.contact.info.address}
               </p>
             </div>
 
-            <div className="bg-background rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="h-6 w-6 text-primary" />
+            <div className="bg-background rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                <Phone className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               </div>
-              <h4 className="font-semibold text-foreground mb-2">联系电话</h4>
-              <p className="text-base font-bold text-foreground/80">
+              <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">联系电话</h4>
+              <p className="text-sm md:text-base font-bold text-foreground/80">
                 {siteConfig.contact.info.phone}
               </p>
             </div>
 
-            <div className="bg-background rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="h-6 w-6 text-primary" />
+            <div className="bg-background rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                <Mail className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               </div>
-              <h4 className="font-semibold text-foreground mb-2">电子邮箱</h4>
-              <p className="text-base font-bold text-foreground/80">
+              <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">电子邮箱</h4>
+              <p className="text-sm md:text-base font-bold text-foreground/80">
                 {siteConfig.contact.info.email}
               </p>
             </div>
 
-            <div className="bg-background rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="h-6 w-6 text-primary" />
+            <div className="bg-background rounded-2xl p-4 md:p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                <Clock className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               </div>
-              <h4 className="font-semibold text-foreground mb-2">工作时间</h4>
-              <p className="text-base font-bold text-foreground/80">
+              <h4 className="font-semibold text-foreground mb-2 text-sm md:text-base">工作时间</h4>
+              <p className="text-sm md:text-base font-bold text-foreground/80">
                 {siteConfig.contact.info.workingHours}
               </p>
             </div>
@@ -458,9 +459,9 @@ export default function Home() {
 
           {/* CTA 按钮 */}
           <div className="text-center">
-            <Button size="lg" className="h-14 px-10 text-base rounded-full font-semibold">
+            <Button size="lg" className="h-12 md:h-14 px-8 md:px-10 text-sm md:text-base rounded-full font-semibold">
               立即联系我们
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
             </Button>
           </div>
         </div>
