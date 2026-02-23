@@ -420,7 +420,7 @@ export default function Home() {
                 <MapPin className="h-6 w-6 text-primary" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">公司地址</h4>
-              <p className="text-base font-medium text-foreground/80">
+              <p className="text-base font-bold text-foreground/80">
                 {siteConfig.contact.info.address}
               </p>
             </div>
@@ -430,7 +430,7 @@ export default function Home() {
                 <Phone className="h-6 w-6 text-primary" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">联系电话</h4>
-              <p className="text-base font-medium text-foreground/80">
+              <p className="text-base font-bold text-foreground/80">
                 {siteConfig.contact.info.phone}
               </p>
             </div>
@@ -440,7 +440,7 @@ export default function Home() {
                 <Mail className="h-6 w-6 text-primary" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">电子邮箱</h4>
-              <p className="text-base font-medium text-foreground/80">
+              <p className="text-base font-bold text-foreground/80">
                 {siteConfig.contact.info.email}
               </p>
             </div>
@@ -450,7 +450,7 @@ export default function Home() {
                 <Clock className="h-6 w-6 text-primary" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">工作时间</h4>
-              <p className="text-base font-medium text-foreground/80">
+              <p className="text-base font-bold text-foreground/80">
                 {siteConfig.contact.info.workingHours}
               </p>
             </div>
