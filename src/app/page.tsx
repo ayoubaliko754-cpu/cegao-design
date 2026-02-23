@@ -125,7 +125,7 @@ export default function Home() {
           </div>
           <Button
             size="lg"
-            className="h-14 px-8 text-base rounded-full font-semibold"
+            className="h-14 px-8 text-base rounded-full font-semibold bg-gray-700 text-white hover:bg-gray-600"
             onClick={() => scrollToSection('about')}
           >
             {siteConfig.hero.ctaText}
