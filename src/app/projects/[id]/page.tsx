@@ -25,6 +25,11 @@ export default function ProjectDetail() {
     const foundProject = siteConfig.projects.items.find((p) => p.id === projectId);
     console.log('Found project:', foundProject);
     setProject(foundProject);
+
+    // 更新页面标题
+    if (foundProject) {
+      document.title = `${foundProject.title} | 烟台策高装饰设计 | 烟台高端室内设计`;
+    }
   }, [params.id]);
 
   if (!project) {
