@@ -11,6 +11,7 @@ export const siteConfig = {
   navMenu: [
     { name: '首页', href: '#home' },
     { name: '关于我们', href: '#about' },
+    { name: '服务范围', href: '#services' },
     { name: '项目案例', href: '#projects' },
     { name: '新闻动态', href: '#news' },
     { name: '招贤纳士', href: '#careers' },
@@ -20,10 +21,10 @@ export const siteConfig = {
   // Hero 区域
   hero: {
     title: '策高設計',
-    subtitle: '专注于高端室内设计与空间美学，打造独具匠心的品质空间',
-    slogan: '办公空间 商业空间 公共空间 家居别墅 娱乐会所',
+    subtitle: '专注于烟台办公楼装修装饰设计、烟台餐厅装修装饰设计、烟台家装别墅住宅装饰装修设计、烟台酒店装饰装修设计、烟台会所装饰装修设计、烟台娱乐KTV装饰装修设计等高端室内设计与空间美学服务',
+    slogan: '办公楼装修 餐厅装修 家装别墅 酒店装修 会所装修 KTV装修',
     ctaText: '了解更多',
-    ctaLink: '#about',
+    ctaLink: '#services',
     backgroundImage: '/images/hero-bg.jpg', // 可以后期替换为真实图片
   },
 
@@ -42,6 +43,57 @@ export const siteConfig = {
       { number: '98%', label: '客户满意度' },
     ],
     image: '/images/about-image.jpg', // 可以后期替换为真实图片
+  },
+
+  // 服务范围
+  services: {
+    title: '服务范围',
+    subtitle: '全方位空间设计解决方案',
+    description: '我们提供专业的室内设计服务，涵盖多个领域，为不同类型的项目提供定制化解决方案。',
+    items: [
+      {
+        title: '烟台办公楼装修装饰设计',
+        description: '为企业打造现代化、专业化的办公空间，提升企业形象和工作效率',
+        icon: '🏢',
+        keywords: ['烟台办公楼装修装饰设计', '烟台办公室装修', '烟台写字楼装修']
+      },
+      {
+        title: '烟台餐厅装修装饰设计',
+        description: '打造独特的餐饮空间，营造舒适用餐环境，提升顾客体验',
+        icon: '🍽️',
+        keywords: ['烟台餐厅装修装饰设计', '烟台餐饮空间设计', '烟台饭店装修']
+      },
+      {
+        title: '烟台洗浴装修装饰设计',
+        description: '专业的洗浴空间设计，注重功能分区与隐私保护',
+        icon: '♨️',
+        keywords: ['烟台洗浴装修装饰设计', '烟台洗浴中心设计', '烟台桑拿装修']
+      },
+      {
+        title: '烟台家装别墅住宅装饰装修设计',
+        description: '高端住宅定制设计，打造温馨舒适的居家环境',
+        icon: '🏠',
+        keywords: ['烟台家装别墅住宅装饰装修设计', '烟台别墅设计', '烟台家装设计']
+      },
+      {
+        title: '烟台酒店装饰装修设计',
+        description: '精品酒店设计，营造独特的入住体验，提升酒店竞争力',
+        icon: '🏨',
+        keywords: ['烟台酒店装饰装修设计', '烟台宾馆装修', '烟台精品酒店设计']
+      },
+      {
+        title: '烟台会所装饰装修设计',
+        description: '高端会所设计，打造私密、尊贵、独特的社交空间',
+        icon: '🎯',
+        keywords: ['烟台会所装饰装修设计', '烟台私人会所设计', '烟台商务会所设计']
+      },
+      {
+        title: '烟台娱乐KTV装饰装修设计',
+        description: '时尚KTV空间设计，营造娱乐氛围，提升顾客体验',
+        icon: '🎤',
+        keywords: ['烟台娱乐KTV装饰装修设计', '烟台KTV设计', '烟台夜总会设计']
+      }
+    ]
   },
 
   // 项目案例

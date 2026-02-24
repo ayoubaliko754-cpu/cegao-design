@@ -26,9 +26,21 @@ export default function ProjectDetail() {
     console.log('Found project:', foundProject);
     setProject(foundProject);
 
-    // 更新页面标题
+    // 更新页面SEO信息
     if (foundProject) {
-      document.title = `${foundProject.title} | 烟台策高装饰设计 | 烟台高端室内设计`;
+      document.title = `${foundProject.title} | 烟台策高装饰设计 | 烟台${foundProject.category}装修装饰设计`;
+      
+      // 更新meta description
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', `烟台策高装饰设计有限公司成功案例：${foundProject.title}，专业提供${foundProject.category}设计服务。${foundProject.description}`);
+      }
+
+      // 更新meta keywords
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        metaKeywords.setAttribute('content', `烟台策高装饰设计,烟台${foundProject.category}装修装饰设计,${foundProject.title},${foundProject.location}室内设计`);
+      }
     }
   }, [params.id]);
 
