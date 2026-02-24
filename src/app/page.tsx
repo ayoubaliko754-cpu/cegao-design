@@ -139,43 +139,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 服务范围 */}
-      <section id="services" className="py-16 md:py-24 bg-muted/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* 标题 */}
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#3A5C79] mb-4">
-              {siteConfig.services.title}
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground">
-              {siteConfig.services.subtitle}
-            </p>
-            <p className="text-sm md:text-base text-muted-foreground max-w-3xl mx-auto mt-4">
-              {siteConfig.services.description}
-            </p>
-          </div>
-
-          {/* 服务列表 */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {siteConfig.services.items.map((service, index) => (
-              <div
-                key={index}
-                className="bg-background rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border"
-              >
-                <div className="text-4xl md:text-5xl mb-4">{service.icon}</div>
-                <h3 className="text-lg md:text-xl font-bold text-[#3A5C79] mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 企业介绍 */}
+      {/* 企业介绍 - 移到服务范围前 */}
       <section id="about" className="py-24 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 标题 */}
@@ -197,6 +161,42 @@ export default function Home() {
                 </p>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 服务范围 - 移到企业介绍后 */}
+      <section id="services" className="py-16 md:py-24 bg-muted/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* 标题 */}
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#3A5C79] mb-4">
+              {siteConfig.services.title}
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground">
+              {siteConfig.services.subtitle}
+            </p>
+            <p className="text-sm md:text-base text-muted-foreground max-w-3xl mx-auto mt-4">
+              {siteConfig.services.description}
+            </p>
+          </div>
+
+          {/* 服务列表 - 一行两个 */}
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+            {siteConfig.services.items.map((service, index) => (
+              <div
+                key={index}
+                className="bg-background rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border"
+              >
+                <div className="text-4xl md:text-5xl mb-4">{service.icon}</div>
+                <h3 className="text-lg md:text-xl font-bold text-[#3A5C79] mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
