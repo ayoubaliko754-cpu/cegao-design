@@ -286,9 +286,10 @@ export default function Home() {
           {/* 新闻列表 */}
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {siteConfig.news.items.map((news, index) => (
-              <div
+              <Link
                 key={news.id}
-                className="group bg-muted/30 rounded-2xl p-6 md:p-8 hover:bg-muted/50 transition-all duration-300 hover:shadow-lg cursor-pointer"
+                href={`/news/${news.id}`}
+                className="group bg-muted/30 rounded-2xl p-6 md:p-8 hover:bg-muted/50 transition-all duration-300 hover:shadow-lg border border-border"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-1 text-xs text-muted-foreground">
@@ -309,7 +310,7 @@ export default function Home() {
                   阅读更多
                   <ChevronRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

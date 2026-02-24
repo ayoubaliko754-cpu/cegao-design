@@ -420,6 +420,8 @@ export const siteConfig = {
         category: '行业洞察',
         summary: '了解更多行业动态和设计趋势，请访问我们的官方网站查看详细报道：https://www.jiemian.com/article/13933968.html',
         image: '/images/news1.jpg',
+        externalLink: 'https://www.jiemian.com/article/13933968.html',
+        readTime: '3分钟阅读'
       },
       {
         id: 2,
@@ -428,6 +430,8 @@ export const siteConfig = {
         category: '行业洞察',
         summary: '查看最新的市场分析和行业资讯，请访问：https://k.sina.com.cn/article_1986249493_m7663c31503301gu3q.html',
         image: '/images/news2.jpg',
+        externalLink: 'https://k.sina.com.cn/article_1986249493_m7663c31503301gu3q.html',
+        readTime: '5分钟阅读'
       },
       {
         id: 3,
@@ -436,6 +440,7 @@ export const siteConfig = {
         category: '行业洞察',
         summary: '随着人们对生活品质要求的提升，室内设计也在不断演变。本文为您解读2024年室内设计的五大流行趋势。',
         image: '/images/news3.jpg',
+        readTime: '4分钟阅读'
       },
       {
         id: 4,
@@ -444,6 +449,7 @@ export const siteConfig = {
         category: '公司新闻',
         summary: '策高设计与国内知名房地产企业签署战略合作协议，共同打造高品质住宅项目。',
         image: '/images/news4.jpg',
+        readTime: '2分钟阅读'
       },
     ],
   },
