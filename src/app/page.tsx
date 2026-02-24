@@ -559,6 +559,55 @@ export default function Home() {
             </div>
           </div>
 
+          {/* SEO服务链接 - 搜索引擎可见但样式简洁 */}
+          <div className="border-t border-slate-800 pt-8 mb-8">
+            <h4 className="text-sm font-semibold text-foreground mb-4">服务范围</h4>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-slate-400">
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台办公楼装修装饰设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台餐厅装修装饰设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台洗浴装修装饰设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台家装别墅住宅装饰装修设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台酒店装饰装修设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台会所装饰装修设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台娱乐KTV装饰装修设计
+              </button>
+            </div>
+          </div>
+
           {/* 版权信息 */}
           <div className="border-t border-slate-800 pt-8 text-center text-sm text-muted-foreground">
             <p>{siteConfig.footer.copyright}</p>

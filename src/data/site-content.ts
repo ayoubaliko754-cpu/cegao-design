@@ -21,8 +21,8 @@ export const siteConfig = {
   // Hero 区域
   hero: {
     title: '策高設計',
-    subtitle: '专注于烟台办公楼装修装饰设计、烟台餐厅装修装饰设计、烟台家装别墅住宅装饰装修设计、烟台酒店装饰装修设计、烟台会所装饰装修设计、烟台娱乐KTV装饰装修设计等高端室内设计与空间美学服务',
-    slogan: '办公楼装修 餐厅装修 家装别墅 酒店装修 会所装修 KTV装修',
+    subtitle: '专注于高端室内设计与空间美学，打造独具匠心的品质空间',
+    slogan: '办公空间 商业空间 公共空间 家居别墅 娱乐会所',
     ctaText: '了解更多',
     ctaLink: '#services',
     backgroundImage: '/images/hero-bg.jpg', // 可以后期替换为真实图片

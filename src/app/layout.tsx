@@ -60,8 +60,100 @@ export default function RootLayout({
 }>) {
   const isDev = process.env.NODE_ENV === 'development';
 
+  // 结构化数据 - 组织信息
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "烟台策高装饰设计有限公司",
+    "url": "https://www.ytcegao.com",
+    "logo": "https://www.ytcegao.com/logo.png",
+    "description": "烟台策高装饰设计有限公司专注于烟台办公楼装修装饰设计、烟台餐厅装修装饰设计、烟台洗浴装修装饰设计、烟台家装别墅住宅装饰装修设计、烟台酒店装饰装修设计、烟台会所装饰装修设计、烟台娱乐KTV装饰装修设计等专业室内设计服务",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "烟台",
+      "addressRegion": "山东省",
+      "addressCountry": "CN",
+      "streetAddress": "烟台市莱山区港城东大街1172号"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+86-13884666525",
+      "email": "design@ytcegao.com",
+      "contactType": "customer service"
+    }
+  };
+
+  // 结构化数据 - 服务列表
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "烟台策高装饰设计服务范围",
+    "description": "专业提供烟台办公楼装修装饰设计、烟台餐厅装修装饰设计、烟台洗浴装修装饰设计、烟台家装别墅住宅装饰装修设计、烟台酒店装饰装修设计、烟台会所装饰装修设计、烟台娱乐KTV装饰装修设计等服务",
+    "itemListElement": [
+      {
+        "@type": "Service",
+        "position": 1,
+        "name": "烟台办公楼装修装饰设计",
+        "description": "为企业打造现代化、专业化的办公空间，提升企业形象和工作效率"
+      },
+      {
+        "@type": "Service",
+        "position": 2,
+        "name": "烟台餐厅装修装饰设计",
+        "description": "打造独特的餐饮空间，营造舒适用餐环境，提升顾客体验"
+      },
+      {
+        "@type": "Service",
+        "position": 3,
+        "name": "烟台洗浴装修装饰设计",
+        "description": "专业的洗浴空间设计，注重功能分区与隐私保护"
+      },
+      {
+        "@type": "Service",
+        "position": 4,
+        "name": "烟台家装别墅住宅装饰装修设计",
+        "description": "高端住宅定制设计，打造温馨舒适的居家环境"
+      },
+      {
+        "@type": "Service",
+        "position": 5,
+        "name": "烟台酒店装饰装修设计",
+        "description": "精品酒店设计，营造独特的入住体验，提升酒店竞争力"
+      },
+      {
+        "@type": "Service",
+        "position": 6,
+        "name": "烟台会所装饰装修设计",
+        "description": "高端会所设计，打造私密、尊贵、独特的社交空间"
+      },
+      {
+        "@type": "Service",
+        "position": 7,
+        "name": "烟台娱乐KTV装饰装修设计",
+        "description": "时尚KTV空间设计，营造娱乐氛围，提升顾客体验"
+      }
+    ]
+  };
+
   return (
     <html lang="zh-CN">
+      <head>
+        {/* 结构化数据 */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        />
+        
+        {/* 隐藏的SEO关键词 - 搜索引擎可见但用户不可见 */}
+        <div style={{ display: 'none' }} aria-hidden="true">
+          <h1>烟台策高装饰设计 烟台办公楼装修装饰设计 烟台餐厅装修装饰设计 烟台洗浴装修装饰设计 烟台家装别墅住宅装饰装修设计 烟台酒店装饰装修设计 烟台会所装饰装修设计 烟台娱乐KTV装饰装修设计</h1>
+          <h2>烟台办公室装修 烟台写字楼装修 烟台餐饮空间设计 烟台饭店装修 烟台洗浴中心设计 烟台桑拿装修 烟台别墅设计 烟台家装设计 烟台宾馆装修 烟台精品酒店设计 烟台私人会所设计 烟台商务会所设计 烟台KTV设计 烟台夜总会设计</h2>
+        </div>
+      </head>
       <body className={`antialiased`}>
         {isDev && <Inspector />}
         {children}
