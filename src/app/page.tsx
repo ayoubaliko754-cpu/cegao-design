@@ -608,6 +608,55 @@ export default function Home() {
             </div>
           </div>
 
+          {/* 室内设计链接 - 搜索引擎可见 */}
+          <div className="mb-8">
+            <h4 className="text-sm font-semibold text-foreground mb-4">室内设计</h4>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-slate-400">
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台办公楼室内设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台餐厅室内设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台洗浴室内设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台别墅室内设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台酒店室内设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台会所室内设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台KTV室内设计
+              </button>
+            </div>
+          </div>
+
           {/* 版权信息 */}
           <div className="border-t border-slate-800 pt-8 text-center text-sm text-muted-foreground">
             <p>{siteConfig.footer.copyright}</p>
