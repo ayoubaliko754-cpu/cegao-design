@@ -605,6 +605,18 @@ export default function Home() {
               >
                 烟台娱乐KTV装饰装修设计
               </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台公共建筑装饰装修设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台医疗康养装饰装修设计
+              </button>
             </div>
           </div>
 
@@ -653,6 +665,18 @@ export default function Home() {
                 className="hover:text-primary transition-colors"
               >
                 烟台KTV室内设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台公共建筑室内设计
+              </button>
+              <button
+                onClick={() => scrollToSection('services')}
+                className="hover:text-primary transition-colors"
+              >
+                烟台医院室内设计
               </button>
             </div>
           </div>
