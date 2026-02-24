@@ -181,8 +181,8 @@ export default function Home() {
             </p>
           </div>
 
-          {/* 服务列表 - 一行两个 */}
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+          {/* 服务列表 - 一行三个，共三行 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {siteConfig.services.items.map((service, index) => (
               <div
                 key={index}
