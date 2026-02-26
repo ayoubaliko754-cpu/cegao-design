@@ -186,6 +186,8 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <head>
+        {/* 百度站点验证 */}
+        <meta name="baidu-site-verification" content="codeva-CoXOovlf9x" />
         {/* 结构化数据 */}
         <script
           type="application/ld+json"
