@@ -7,9 +7,11 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
-import { ArrowLeft, Plus, Upload, Save, Trash2, FileText, FolderTree } from 'lucide-react';
+import { ArrowLeft, Plus, Upload, Save, Trash2, FileText, FolderTree, LogOut, Shield } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
 
 export default function AdminPage() {
+  const { isAuthenticated, isLoading, logout } = useAuth();
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -82,6 +84,26 @@ export default function AdminPage() {
     }
   };
 
+  // 检查登录状态
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <Shield className="h-12 w-12 text-muted-foreground animate-pulse mx-auto mb-4" />
+          <p className="text-muted-foreground">正在验证身份...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!isAuthenticated) {
+    // 重定向到登录页
+    if (typeof window !== 'undefined') {
+      window.location.href = '/admin/login';
+    }
+    return null;
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* 顶部导航 */}
@@ -97,6 +119,15 @@ export default function AdminPage() {
               </Button>
               <h1 className="text-xl font-bold">网站管理后台</h1>
             </div>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={logout}
+              className="text-muted-foreground hover:text-red-500"
+            >
+              <LogOut className="mr-2 h-4 w-4" />
+              退出登录
+            </Button>
           </div>
         </div>
       </nav>

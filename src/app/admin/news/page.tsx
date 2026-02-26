@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/data/site-content';
-import { Plus, Edit2, Trash2, ArrowLeft, Save, ExternalLink, Calendar, Clock, FileText, Upload } from 'lucide-react';
+import { Plus, Edit2, Trash2, ArrowLeft, Save, ExternalLink, Calendar, Clock, FileText, Upload, Shield, LogOut } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
 
 interface NewsItem {
   id: number;
@@ -19,6 +20,8 @@ interface NewsItem {
 }
 
 export default function NewsAdminPage() {
+  const { isAuthenticated, isLoading, logout } = useAuth();
+
   const [newsList, setNewsList] = useState<NewsItem[]>([]);
   const [showForm, setShowForm] = useState(false);
   const [editingItem, setEditingItem] = useState<NewsItem | null>(null);
@@ -154,6 +157,26 @@ export default function NewsAdminPage() {
     }
   };
 
+  // 检查登录状态
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <Shield className="h-12 w-12 text-muted-foreground animate-pulse mx-auto mb-4" />
+          <p className="text-muted-foreground">正在验证身份...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!isAuthenticated) {
+    // 重定向到登录页
+    if (typeof window !== 'undefined') {
+      window.location.href = '/admin/login';
+    }
+    return null;
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* 顶部导航 */}
@@ -186,6 +209,15 @@ export default function NewsAdminPage() {
               >
                 <Save className="mr-2 h-4 w-4" />
                 导出配置
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={logout}
+                className="text-muted-foreground hover:text-red-500"
+              >
+                <LogOut className="mr-2 h-4 w-4" />
+                退出登录
               </Button>
             </div>
           </div>
