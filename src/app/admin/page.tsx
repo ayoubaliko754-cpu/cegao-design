@@ -1,12 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
-import { ArrowLeft, Plus, Upload, Save, Trash2 } from 'lucide-react';
+import { ArrowLeft, Plus, Upload, Save, Trash2, FileText, FolderTree } from 'lucide-react';
 
 export default function AdminPage() {
   const [projects, setProjects] = useState([
@@ -101,6 +102,45 @@ export default function AdminPage() {
       </nav>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+        {/* 功能导航 */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <Link href="/admin/news">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer border-2 border-transparent hover:border-primary">
+              <CardHeader>
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <FileText className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle>新闻管理</CardTitle>
+                    <CardDescription>
+                      管理网站新闻动态，发布最新资讯
+                    </CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+          </Link>
+
+          <Link href="/admin/projects">
+            <Card className="hover:shadow-lg transition-shadow cursor-pointer border-2 border-transparent hover:border-primary">
+              <CardHeader>
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <FolderTree className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle>项目管理</CardTitle>
+                    <CardDescription>
+                      管理项目案例，展示优秀作品
+                    </CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+            </Card>
+          </Link>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-8">
           {/* 左侧：添加新项目 */}
           <div>

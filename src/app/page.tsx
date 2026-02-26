@@ -9,6 +9,7 @@ import { ArrowRight, Calendar, MapPin, Phone, Mail, Clock, ChevronRight, Menu, X
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [newsItems, setNewsItems] = useState(siteConfig.news.items);
 
   // 滚动效果
   useEffect(() => {
@@ -17,6 +18,19 @@ export default function Home() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // 从 localStorage 加载新闻数据
+  useEffect(() => {
+    const savedNews = localStorage.getItem('cegao_news');
+    if (savedNews) {
+      try {
+        const parsed = JSON.parse(savedNews);
+        setNewsItems(parsed);
+      } catch (e) {
+        console.error('Failed to parse news from localStorage:', e);
+      }
+    }
   }, []);
 
   // 平滑滚动
@@ -285,7 +299,7 @@ export default function Home() {
 
           {/* 新闻列表 */}
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {siteConfig.news.items.map((news, index) => (
+            {newsItems.map((news, index) => (
               <Link
                 key={news.id}
                 href={`/news/${news.id}`}
