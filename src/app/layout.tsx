@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Inspector } from 'react-dev-inspector';
 import './globals.css';
 
 // Polyfill for toSorted() method
@@ -94,8 +93,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isDev = process.env.NODE_ENV === 'development';
-
   // 结构化数据 - 组织信息
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -205,7 +202,6 @@ export default function RootLayout({
           <h2>烟台办公室装修 烟台写字楼装修 烟台办公楼设计 烟台餐饮空间设计 烟台饭店装修 烟台餐厅设计 烟台洗浴中心设计 烟台桑拿装修 烟台洗浴设计 烟台别墅设计 烟台家装设计 烟台住宅装修 烟台宾馆装修 烟台精品酒店设计 烟台酒店设计 烟台私人会所设计 烟台商务会所设计 烟台会所设计 烟台KTV设计 烟台夜总会设计 烟台娱乐场所装修 烟台市政空间设计 烟台文化场馆设计 烟台公共空间设计 烟台康养中心设计 烟台养老院设计 烟台医疗空间设计 烟台商业空间设计 烟台软装搭配 烟台展厅设计</h2>
         </div>
 
-        {isDev && <Inspector />}
         {children}
       </body>
     </html>
