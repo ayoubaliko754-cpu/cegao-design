@@ -1,0 +1,12 @@
+# 策高室内装饰设计 - Robots.txt
+
+User-agent: *
+Allow: /
+
+# 禁止爬取的页面
+Disallow: /admin/
+Disallow: /admin/login
+Disallow: /api/
+
+# 网站地图
+Sitemap: https://cegao-design.vercel.app/sitemap.xml
