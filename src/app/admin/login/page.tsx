@@ -12,8 +12,8 @@ export default function LoginPage() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  // 默认密码（生产环境应该改为更复杂的密码）
-  const ADMIN_PASSWORD = 'cegao2024';
+  // 管理员密码
+  const ADMIN_PASSWORD = 'solo514135';
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
