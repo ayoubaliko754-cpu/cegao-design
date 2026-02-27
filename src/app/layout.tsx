@@ -187,6 +187,8 @@ export default function RootLayout({
         <meta name="baidu-site-verification" content="codeva-CoXOovlf9x" />
         {/* Google 站点验证 */}
         <meta name="google-site-verification" content="62cLheBf29cp5c7JviIHNs6nByWCWDLCcWrFnmy1z_Y" />
+        {/* 搜狗站点验证 */}
+        <meta name="sogou_site_verification" content="OuC88QZwsI" />
         {/* 结构化数据 */}
         <script
           type="application/ld+json"
