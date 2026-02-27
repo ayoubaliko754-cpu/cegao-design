@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/data/site-content';
 import { Plus, Edit2, Trash2, ArrowLeft, Save, ExternalLink, Calendar, Clock, FileText, Upload, Shield, LogOut } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
+import SEOSubmitTool from '@/components/admin/SEOSubmitTool';
 
 interface NewsItem {
   id: number;
@@ -478,6 +479,11 @@ export default function NewsAdminPage() {
               )}
             </div>
           )}
+
+          {/* SEO 提交工具 */}
+          <div className="mt-12">
+            <SEOSubmitTool />
+          </div>
 
           {/* 使用说明 */}
           <div className="mt-12 bg-blue-50 dark:bg-blue-950 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
