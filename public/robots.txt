@@ -9,4 +9,4 @@ Disallow: /admin/login
 Disallow: /api/
 
 # 网站地图
-Sitemap: https://cegao-design.vercel.app/sitemap.xml
+Sitemap: https://www.ytcegao.com/sitemap.xml
