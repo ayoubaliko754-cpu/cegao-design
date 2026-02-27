@@ -44,13 +44,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* 导航栏 */}
+      {/* 导航栏 - 宽度与内容区域完全一致 */}
       <nav
-        className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
+        className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 w-full ${
           scrolled ? 'bg-background shadow-lg' : 'bg-background shadow-sm'
         }`}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* 桌面端导航 */}
           <div className="hidden md:flex h-20 items-center justify-between">
             {/* Logo */}
@@ -76,8 +76,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 手机端导航 - 固定高度，防止错位 */}
-          <div className="md:hidden min-h-[110px] flex flex-col justify-center">
+          {/* 手机端导航 - 宽度与内容区域完全一致 */}
+          <div className="md:hidden w-full min-h-[110px] flex flex-col justify-center">
             {/* Logo */}
             <div className="flex justify-center py-3">
               <h1 className="text-base font-black font-brand text-[#3A5C79] tracking-[0.12em]" style={{ fontFamily: 'Microsoft YaHei, 微软雅黑, Arial, sans-serif' }}>
