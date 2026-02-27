@@ -189,6 +189,8 @@ export default function RootLayout({
         <meta name="google-site-verification" content="62cLheBf29cp5c7JviIHNs6nByWCWDLCcWrFnmy1z_Y" />
         {/* 搜狗站点验证 */}
         <meta name="sogou_site_verification" content="OuC88QZwsI" />
+        {/* Bing 站点验证 */}
+        <meta name="msvalidate.01" content="BADDC440AEAF818C8E0EDF3D2C9490D2" />
         {/* 结构化数据 */}
         <script
           type="application/ld+json"
