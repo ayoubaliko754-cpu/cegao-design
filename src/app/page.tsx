@@ -123,6 +123,9 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center w-full">
+          {/* 隐藏的 H1 标签，用于 SEO，确保百度抓取到包含"烟台"的标题 */}
+          <h1 className="sr-only">烟台策高装饰设计</h1>
+
           <h2 className="text-3xl sm:text-4xl md:text-7xl font-black font-brand text-[#3A5C79] mb-4 md:mb-6" style={{ letterSpacing: '0.2em md:0.25em', fontFamily: 'Microsoft YaHei, 微软雅黑, Arial, sans-serif' }}>
             {siteConfig.hero.title}
           </h2>

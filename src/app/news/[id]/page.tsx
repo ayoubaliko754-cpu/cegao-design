@@ -1,13 +1,21 @@
-'use client';
-
-import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { siteConfig } from '@/data/site-content';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import type { Metadata } from 'next';
 
-export default function NewsDetailPage() {
-  const params = useParams();
-  const newsId = parseInt(params.id as string);
+// 生成动态 Meta Title
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const newsId = parseInt(params.id);
+  const newsItem = siteConfig.news.items.find(item => item.id === newsId);
+
+  return {
+    title: newsItem ? `${newsItem.title} | 烟台策高装饰设计` : '新闻详情 | 烟台策高装饰设计',
+    description: newsItem?.summary || '烟台策高装饰设计有限公司新闻动态',
+  };
+}
+
+export default function NewsDetailPage({ params }: { params: { id: string } }) {
+  const newsId = parseInt(params.id);
 
   // 根据ID查找新闻
   const newsItem = siteConfig.news.items.find(item => item.id === newsId);
